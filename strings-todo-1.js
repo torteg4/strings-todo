@@ -24,8 +24,6 @@
 
     // acronym("Live from New York, it's Saturday Night!") =>  "LFNYISN" 
     const string3 = ("Live from New York, it's Saturday Night!");
-        //? JavaScript’s split() method splits a string into a list – the default separator is whitespace.
-        //? An empty list is taken to store all the first letters of the words in the given string.
 
     var string3Acronym = string3.replace(/(\w)\w*\W*/g, function (_, i) {
         return i.toUpperCase();
@@ -37,13 +35,16 @@
 
     // countNonSpaces("Honey pie, you are driving me crazy") => 29;
     const string4 = ("Honey pie, you are driving me crazy");
-        //? JavaScript’s split() method splits a string into a list – the default separator is whitespace.
-        //? An empty list is taken to store all the first letters of the words in the given string.
+        //? Replace whitespaces with no spaces, then count what is returned
 
-    var string3Acronym = string3.replace(/(\w)\w*\W*/g, function (_, i) {
-        return i.toUpperCase();
-        }
-    )
-    console.log("COUNT NON SPACES:", string3Acronym)
+    var string4Characters = string4.replace(/\s/g, "")
+    var string4NonSpaces = string4Characters.length;
+    console.log("COUNT NON SPACES:", string4NonSpaces)
 
+    //* REMOVE SHORTER STRINGS
 
+    // removeShorterStrings(['Good morning', 'sunshine', 'the', 'Earth', 'says', 'hello'], 4) => ['Good morning', 'sunshine', 'Earth', 'says', 'hello']
+    const string5 = (['Good morning', 'sunshine', 'the', 'Earth', 'says', 'hello']);
+        //? 
+    
+    console.log("REMOVE SHORTER STRINGS:", string5)
